@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block content %}
+<h1>from the product app</h1>
+<p>
+<h3>List of objects present in the database</h3>
+<ul>
+    {% for obj in object_list %}
+    <li>{{obj.id}} >>> <a href="{{obj.get_absolute_url}}"> {{obj.title}}</a></li>
+    {% endfor %}
+
+</ul>
+</p>
+
+{% endblock content %}
